@@ -1,0 +1,9 @@
+node_modules/
+.DS_Store
+.claude/settings.local.json
+
+# Chrome-generated when loading the unpacked extension (compiled DNR rulesets)
+_metadata/
+
+# Build output (the publishable Web Store zip)
+dist/

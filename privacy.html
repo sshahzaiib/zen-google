@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Privacy Policy — Zen Google</title>
+  <meta name="description" content="Zen Google collects no data. Privacy policy for the Zen Google Chrome extension." />
+  <style>
+    :root {
+      color-scheme: light dark;
+      --paper: #faf8f3; --surface: #ffffff; --ink: #211f1b; --ink-soft: #6c675e;
+      --line: #ece7dd; --accent: #4f7d62;
+      --serif: "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif;
+      --sans: "Avenir Next", Avenir, "Segoe UI", system-ui, sans-serif;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root { --paper: #201e1a; --surface: #2b2925; --ink: #e6e0d4; --ink-soft: #a8a294;
+              --line: #3a362f; --accent: #7cb592; }
+    }
+    * { box-sizing: border-box; }
+    body { margin: 0; background: var(--paper); color: var(--ink); font-family: var(--sans);
+           font-size: 16px; line-height: 1.6; -webkit-font-smoothing: antialiased; }
+    .wrap { max-width: 640px; margin: 0 auto; padding: 56px 24px 80px; }
+    .brand { display: flex; align-items: center; gap: 12px; margin-bottom: 8px; }
+    .mark { width: 34px; height: 34px; flex: none; }
+    h1 { font-family: var(--serif); font-weight: 600; font-size: 30px; margin: 0; line-height: 1.1; }
+    .tag { color: var(--ink-soft); font-size: 13px; margin-top: 4px; }
+    .updated { color: var(--ink-soft); font-size: 13px; margin: 22px 0 28px; }
+    .lead { font-family: var(--serif); font-size: 21px; line-height: 1.4; margin: 0 0 24px; }
+    .lead strong { color: var(--accent); }
+    ul { padding-left: 20px; margin: 0 0 24px; }
+    li { margin: 10px 0; }
+    p { margin: 0 0 20px; }
+    a { color: var(--accent); }
+    hr { border: none; border-top: 1px solid var(--line); margin: 32px 0; }
+    .contact { font-size: 15px; color: var(--ink-soft); }
+    .contact a { font-weight: 600; }
+  </style>
+</head>
+<body>
+  <main class="wrap">
+    <div class="brand">
+      <svg class="mark" viewBox="0 0 32 32" aria-hidden="true">
+        <circle cx="16" cy="16" r="11" fill="none" stroke="var(--accent)" stroke-width="3"
+                stroke-linecap="round" stroke-dasharray="57 13" transform="rotate(-48 16 16)" />
+      </svg>
+      <div>
+        <h1>Privacy Policy</h1>
+        <div class="tag">Zen Google — a calmer Google</div>
+      </div>
+    </div>
+
+    <p class="updated">Last updated: 23 May 2026</p>
+
+    <p class="lead"><strong>Zen Google does not collect, store, transmit, or sell any personal data.</strong></p>
+
+    <ul>
+      <li>It has <strong>no backend server</strong> and <strong>no analytics</strong>.</li>
+      <li>Your preferences — the feature toggles, the AI mode, and the list of sites where you've
+        chosen to allow One Tap — are stored using Chrome's built-in extension storage. If you are
+        signed into Chrome, they sync through <strong>your own Google account</strong> — they are
+        never sent to us or to any third party.</li>
+      <li>Site-access permissions are requested <strong>only when you turn a feature on</strong>, and
+        are used <strong>solely</strong> to block the Google "Sign in with Google" popup or to remove
+        the AI Overview from search results. No page content is ever read, recorded, or transmitted.</li>
+    </ul>
+
+    <p>Zen Google does not use or transfer any data to third parties, for advertising, for
+      determining creditworthiness, or for any purpose unrelated to its single function described
+      above.</p>
+
+    <hr />
+    <p class="contact">Questions? <a href="mailto:shahzaib@shahzaibakram.dev">shahzaib@shahzaibakram.dev</a></p>
+  </main>
+</body>
+</html>

@@ -1,0 +1,14 @@
+{
+  "name": "zen-google",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Chrome extension: block Google One Tap and remove AI Overview.",
+  "type": "commonjs",
+  "scripts": {
+    "test": "node --test"
+  },
+  "devDependencies": {
+    "jsdom": "^24.1.0",
+    "sharp": "^0.34.5"
+  }
+}

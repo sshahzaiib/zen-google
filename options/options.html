@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Zen Google — Allowed sites</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --paper: #faf8f3; --surface: #ffffff; --ink: #211f1b; --ink-soft: #6c675e;
+      --line: #ece7dd; --accent: #4f7d62; --accent-weak: rgba(79, 125, 98, 0.12);
+      --danger: #b4543f;
+      --serif: "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif;
+      --sans: "Avenir Next", Avenir, "Segoe UI", system-ui, sans-serif;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root { --paper: #201e1a; --surface: #2b2925; --ink: #e6e0d4; --ink-soft: #a8a294;
+              --line: #3a362f; --accent: #7cb592; --accent-weak: rgba(124, 181, 146, 0.18);
+              --danger: #e0967f; }
+    }
+    * { box-sizing: border-box; }
+    body { margin: 0; background: var(--paper); color: var(--ink); font-family: var(--sans);
+           font-size: 15px; line-height: 1.55; -webkit-font-smoothing: antialiased; }
+    .wrap { max-width: 560px; margin: 0 auto; padding: 56px 24px 80px; }
+    .head { display: flex; align-items: center; gap: 12px; margin-bottom: 6px; }
+    .mark { width: 32px; height: 32px; flex: none; }
+    h1 { font-family: var(--serif); font-weight: 600; font-size: 26px; margin: 0; line-height: 1.1; }
+    .tag { color: var(--ink-soft); font-size: 13px; margin-top: 3px; }
+    .intro { color: var(--ink-soft); margin: 18px 0 24px; }
+
+    .add { display: flex; gap: 8px; margin-bottom: 8px; }
+    input[type="text"] {
+      flex: 1; font: inherit; color: var(--ink); padding: 10px 12px;
+      border: 1px solid var(--line); border-radius: 10px; background: var(--surface);
+    }
+    input[type="text"]:focus-visible { outline: 2px solid var(--accent); outline-offset: 1px; border-color: var(--accent); }
+    .btn {
+      font: inherit; font-weight: 600; padding: 10px 16px; cursor: pointer;
+      color: #fff; background: var(--accent); border: 1px solid var(--accent); border-radius: 10px;
+    }
+    .btn:hover { filter: brightness(1.05); }
+    .btn:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+    .error { color: var(--danger); font-size: 12.5px; margin: 0 0 16px 2px; }
+
+    ul { list-style: none; padding: 0; margin: 18px 0 0; border-top: 1px solid var(--line); }
+    .item { display: flex; align-items: center; justify-content: space-between;
+            padding: 12px 4px; border-bottom: 1px solid var(--line); }
+    .item__domain { font-size: 14.5px; word-break: break-all; }
+    .remove { font: inherit; font-size: 15px; line-height: 1; color: var(--ink-soft);
+              background: none; border: none; cursor: pointer; padding: 6px 8px; border-radius: 8px; }
+    .remove:hover { color: var(--danger); background: var(--accent-weak); }
+    .remove:focus-visible { outline: 2px solid var(--accent); outline-offset: 1px; }
+    .empty { color: var(--ink-soft); font-style: italic; padding: 22px 4px; }
+  </style>
+</head>
+<body>
+  <main class="wrap">
+    <div class="head">
+      <svg class="mark" viewBox="0 0 32 32" aria-hidden="true">
+        <circle cx="16" cy="16" r="11" fill="none" stroke="var(--accent)" stroke-width="3"
+                stroke-linecap="round" stroke-dasharray="57 13" transform="rotate(-48 16 16)" />
+      </svg>
+      <div>
+        <h1>Allowed sites</h1>
+        <div class="tag">Zen Google</div>
+      </div>
+    </div>
+
+    <p class="intro">Google's "Sign in with Google" One Tap popup stays blocked everywhere except
+      the sites listed below. Each site also covers its subdomains.</p>
+
+    <div class="add">
+      <input type="text" id="domainInput" placeholder="example.com" autocomplete="off"
+             spellcheck="false" aria-label="Site domain to allow" />
+      <button class="btn" id="addBtn" type="button">Add</button>
+    </div>
+    <p class="error" id="error" hidden>Enter a valid site domain, e.g. example.com</p>
+
+    <ul id="list"></ul>
+    <p class="empty" id="empty" hidden>No sites yet — One Tap is blocked everywhere.</p>
+  </main>
+
+  <script src="../lib/state.js"></script>
+  <script src="options.js"></script>
+</body>
+</html>

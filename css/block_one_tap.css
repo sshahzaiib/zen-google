@@ -1,0 +1,10 @@
+#credential_picker_container,
+#credential_picker_iframe,
+iframe[src^="https://accounts.google.com/gsi/"] {
+  display: none !important;
+  visibility: hidden !important;
+  opacity: 0 !important;
+  pointer-events: none !important;
+  height: 0 !important;
+  width: 0 !important;
+}
